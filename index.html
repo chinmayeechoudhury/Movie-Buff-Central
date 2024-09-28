@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRR Fan Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <header class="shadow p-4 d-flex justify-content-center align-items-center flex-column">
+        <h1>Welcome to the  RRR (Rise Roar Revolt) Fan Page!</h1>
+        <h4 class="mt-2 text-center">Your go-to destination for all things RRR. Explore character bios, watch movie trailers, and test your knowledge!</h4>
+    </header>
+    <section class="p-4">
+        <div class="d-flex justify-content-center p-2 mt-3">
+            <img class="p-3" src="public/images/OIP.jpeg" alt="">
+        </div>
+        <h1 class="fw-bold">RRR</h1>
+        <p class="fs-5">RRR (Rise Roar Revolt) is a 2022 Indian Telugu-language epic action drama film directed by S. S. Rajamouli. Set in the 1920s during British colonial rule in India, the film is a fictionalized story of two legendary revolutionaries, Alluri Sitarama Raju and Komaram Bheem, who come from different regions and backgrounds. While they have different goals—Raju works within the British police force to overthrow them from the inside, and Bheem is a tribal leader fighting to rescue a kidnapped girl—their paths cross, leading to a powerful friendship and shared battle against British oppression.</p>
+        <p class="fs-5 mt-4">RRR is known for its breathtaking action sequences, emotional depth, and grand visual spectacle, combining elements of history, myth, and entertainment. The film features stunning performances by Ram Charan (as Raju) and N. T. Rama Rao Jr. (as Bheem), along with a strong supporting cast. It's celebrated for its high-energy storytelling, incredible dance numbers like Naatu Naatu, and its overall depiction of heroism and sacrifice in the fight for freedom.</p>
+        <div class="img-div p-4">
+            <div class="d-flex justify-content-around shadow p-4">
+              <img class="img-1 shadow me-4" onclick="window.open('public/images/img1.jpg')" src="public/images/img1.jpg" alt="">
+              <img class="img-3 shadow" onclick="window.open('public/images/img3.jpeg')" src="public/images/img3.jpeg" alt="">
+            </div>
+            <div class="p-4 shadow d-flex justify-content-center align-items-center w-100"><img class="img-2 shadow" src="public/images/img2.jpg" onclick="window.open('public/images/img2.jpg')" alt=""></div>
+            <div class="p-4 shadow d-flex justify-content-around">
+              <img class="img-4" onclick="window.open('public/images/img4.jpg')"  src="public/images/img4.jpg" alt="">
+              <img class="img-6" onclick="window.open('public/images/img6.jpg')" src="public/images/img6.jpg" alt="">
+            </div>
+            <div><img class="img-5 p-4 shadow" onclick="window.open('public/images/img5.jpg')" src="public/images/img5.jpg" alt=""></div>
+        </div>
+    </section>
+    <h2 class="p-4 fw-bold fs-1 pb-0 text-dark">Character Bios</h2>
+    <section id="characters" class="text-center">
+        <!-- Alluri Sitarama Raju Character Bio -->
+        <div class="character">
+          <img src="public/images/Alluri Sitarama Raju.jpeg" alt="Alluri Sitarama Raju" class="character-image">
+          <h2>Alluri Sitarama Raju</h2>
+          <p class="description">Alluri Sitarama Raju is portrayed as a fiery and strategic revolutionary who works within the British police force to overthrow the colonial regime. His calm demeanor hides a fierce resolve to fight for freedom.</p>
+          <p class="fact"><strong>Interesting Fact:</strong> Raju symbolizes *fire* in the film, representing his intensity, passion, and explosive fight against oppression.</p>
+        </div>
+    
+        <!-- Komaram Bheem Character Bio -->
+        <div class="character">
+          <img src="public/images/Komaram Bheem.jpeg" alt="Komaram Bheem" class="character-image">
+          <h2>Komaram Bheem</h2>
+          <p class="description">Komaram Bheem is depicted as a tribal leader who stands against injustice to protect his people. His mission is to rescue a girl taken by the British, and his strength and endurance shine throughout the film.</p>
+          <p class="fact"><strong>Interesting Fact:</strong> Bheem symbolizes *water*, representing his calm resilience and ability to adapt to any challenge while being a force of nature.</p>
+        </div>
+      </section>
+      <h2 class="p-4 fw-bold fs-1 text-dark">Movie Trailers</h2>
+      <div class="d-flex justify-content-around mb-4">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GY4BgdUSpbE?si=OFzpkZdWvMYnwSK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2_BkCz3OnlY?si=7qR959w52NVUbkQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <h2 class="p-4 fw-bold fs-1 text-dark">Quote of the Day</h2>
+    
+      <section id="quote-section">
+        <h2>Here's a Quote to Inspire You:</h2>
+        <p id="quote">" Friendship is the most powerful bond; it's forged in trust and bravery. - RRR "</p>
+      </section>
+
+      <div class=" p-4 d-flex justify-content-center align-items-center">
+        <button onclick="generateQuote()">New Quote</button>
+      </div>
+
+
+      <h2 class="p-4 fw-bold fs-1 text-dark">RRR Movie Trivia Quiz</h2>
+    
+      <section id="quiz-section">
+        <div id="quiz-container">
+          <h2 id="question"></h2>
+    
+          <ul id="choices">
+            <!-- Options will be dynamically loaded here -->
+          </ul>
+    
+          <button class="quizbtn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+        </div>
+    
+        <div id="result-container" style="display:none;">
+          <h2>Quiz Completed!</h2>
+          <p id="score"></p>
+          <button class="quizbtn" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+      </section>
+    
+    <footer class="p-4 shadow d-flex justify-content-center align-items-center">
+        <h5>Fan Page | RRR © 2024 Made By Chinmayee Choudhury</h5>
+    </footer>
+    <script src="src/script.js"></script>
+</body>
+</html>

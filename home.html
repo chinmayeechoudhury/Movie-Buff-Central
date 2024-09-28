@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Cinematic Universe Fan Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #20232a;
+  color: #61dafb;
+  text-align: center;
+  padding: 20px;
+}
+
+.poster-grid {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.poster-grid img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #20232a;
+  color: #61dafb;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Marvel Cinematic Universe Fan Hub!</h1>
+    <p>Your go-to destination for all things Marvel. Explore character bios, watch movie trailers, and test your knowledge!</p>
+  </header>
+
+  <section id="posters">
+    <h2>Movie Posters</h2>
+    <div class="poster-grid">
+      <img src="images/ironman.jpg" alt="Iron Man Poster">
+      <img src="images/thor.jpg" alt="Thor Poster">
+      <img src="images/captainamerica.jpg" alt="Captain America Poster">
+    </div>
+  </section>
+
+  <nav>
+    <ul>
+      <li><a href="characters.html">Character Bios</a></li>
+      <li><a href="#trailers">Movie Trailers</a></li>
+      <li><a href="quiz.html">Trivia Quiz</a></li>
+    </ul>
+  </nav>
+
+  <section id="trailers">
+    <h2>Watch the Trailers</h2>
+    <div class="trailers">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8ugaeA-nMTc" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5V6Xp7oKlr8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+  <section id="quote-of-the-day">
+    <h2>Quote of the Day</h2>
+    <p id="quote"></p>
+  </section>
+  
+  <script>
+    const quotes = [
+      "I am Iron Man. - Tony Stark",
+      "That’s my secret, Cap: I’m always angry. - Bruce Banner",
+      "We are Groot. - Groot",
+      "Avengers, assemble! - Captain America"
+    ];
+  
+    function displayQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  
+    window.onload = displayQuote;
+  </script>
+    
+
+  <footer>
+    <p>Fan Hub | Marvel Cinematic Universe © 2024</p>
+  </footer>
+</body>
+</html>

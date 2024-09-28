@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCU Trivia Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Test Your MCU Knowledge!</h1>
+  </header>
+
+  <section id="quiz">
+    <form id="trivia-quiz">
+      <div>
+        <p>Who is the first Avenger?</p>
+        <label><input type="radio" name="q1" value="correct"> Captain America</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Iron Man</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Thor</label><br>
+      </div>
+
+      <div>
+        <p>What is the name of Thor’s hammer?</p>
+        <label><input type="radio" name="q2" value="wrong"> Stormbreaker</label><br>
+        <label><input type="radio" name="q2" value="correct"> Mjolnir</label><br>
+        <label><input type="radio" name="q2" value="wrong"> Thunderstrike</label><br>
+      </div>
+
+      <input type="button" value="Submit" onclick="checkAnswers()">
+    </form>
+
+    <p id="result"></p>
+  </section>
+
+  <script>
+    function checkAnswers() {
+      let correct = 0;
+      const form = document.getElementById('trivia-quiz');
+      const answers = form.querySelectorAll('input[type="radio"]:checked');
+
+      answers.forEach((answer) => {
+        if (answer.value === 'correct') {
+          correct++;
+        }
+      });
+
+      document.getElementById('result').innerText = `You got ${correct} out of 2 correct!`;
+    }
+  </script>
+</body>
+</html>
